@@ -9,6 +9,14 @@
       background-color: #0b192f;
   }
 
+  .main {
+    display: flex;
+  }
+
+  .main > .class1 {
+    width: 70%;
+  }
+
   header {
       background-color: #162b4d;
       margin: 0 25px 15px 15px;
@@ -31,32 +39,15 @@
   header > nav > a {
     text-decoration: none;
     color: white;
-    margin-right: 40px;
+    margin: 28px;
+    padding: 28px;
   }
 
   header > nav > a:hover {
     text-decoration: none;
     background-color: rgba(253, 253, 253, 0.3);
+    margin: 28px;
   }
-  /*
-div {
-      display: inline-block;
-}
-  div a {
-    text-decoration: none;
-    color: white;
-    margin-right: 40px;
-    height: 30px;
-    width: 30px;
-  }
-
-  div a:hover {
-    text-decoration: none;
-    background-color: rgba(253, 253, 253, 0.3);
-    height: 30px;
-    width: 30px;
-  }
-  */
 
   .class1 >article {
       display: flex;
@@ -73,36 +64,33 @@ div {
 
   article img {
       height: 300px;
-      width: 430px;
-      max-width: 900px;
-      max-height: 1200px;
+      width: 100%;
       opacity: 1.0;
+      background-color: lawngreen;
+      z-index: 100;
   }
 
   article img:hover {
-    height: 300px;
-    width: 430px;
-    opacity: 0.2;
+    /*
+    background-color: rgba(248, 66, 42, 0.7);
+    position: absolute;
+    */
     cursor: pointer;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
   }
 
   .text {
-      width: 300px;
+      width: 100%;
       line-height: 1.7;
   }
-/*
-  .text:hover {
-    background-color: rgb(243, 210, 80);
-    opacity: 0.9;
-}
-*/
+
   .text > p{
     color:rgba(0, 0, 0, 0.5);
     width: 280px;
   }
 
   .text h2 {
-      margin-bottom: 10px;
+    margin-bottom: 10px;
     color:rgba(0, 0, 0, 0.5);
   }
 
@@ -135,17 +123,18 @@ div {
   .bckgrnd1 {
       background-color: rgb(243, 210, 80);
       height: 300px;
-      width: 430px;
+      width: 100%;
   }
 
   .bckgrnd1:hover {
-    background-color: rgba(243, 210, 80, 0.9);
+    background-color: rgba(243, 210, 80);
+    position: relative;
   }
 
   .bckgrnd2 {
     background-color: rgb(141, 135, 65);
     height: 300px;
-    width: 430px;
+    width: 100%;
   }
 
   .bckgrnd2:hover {
@@ -155,7 +144,7 @@ div {
   .bckgrnd3 {
     background-color: rgb(101, 157, 189);
     height: 300px;
-    width: 430px;;
+    width: 100%;
   }
 
   .bckgrnd3:hover {
@@ -165,7 +154,7 @@ div {
   .bckgrnd4 {
     background-color: rgb(218, 173, 134);
     height: 300px;
-    width: 430px;
+    width: 100%;
   }
 
   .bckgrnd4:hover {
@@ -175,7 +164,7 @@ div {
   .backimg {
       background-image: url(../img/post5.jpg);
       height: 400px;
-      width: 860px;
+      width: 67.3%;
       margin-left: 15px;
   }
 
@@ -194,21 +183,19 @@ div {
     line-height: 2.2;
   }
 
-  .main {
-      display: flex;
-  }
-
-  aside img {
-      height: 152px;
-      width: 345px;
-      max-width: 900px;
-      max-height: 1200px;
+  aside {
+    width: 28%;
   }
 
   aside article {
       background-color: #FFF;
       margin-right: 25px;
       margin-bottom: 20px;
+      width: 100%;
+  }
+
+  aside img {
+    width: 100%;
   }
 
   aside h3 {
@@ -263,9 +250,15 @@ div {
     header {
         background-color: #162b4d;
         width: 100%;
-        min-width: 200px;
         margin: 0;
-        border-right: 30px solid #162b4d;
+    }
+    
+    aside, .class1 {
+      width: 100%;
+    }
+
+    aside article {
+        margin-right: 35px;
     }
 
     .class1 > article{
@@ -279,15 +272,6 @@ div {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
-    aside img {
-        margin-right: 26px;
-    }
-
-    aside article {
-        margin-right: 35px;
-    }
-
     .backimg {
         background-image: url(../img/post5.jpg);
         height: 200px;
@@ -350,5 +334,10 @@ div {
         background-color: #FFF;
         width: 345px;
     }
+
+    aside img {
+      height: 150px;
+      width: 100%;
+  }
 
   }
